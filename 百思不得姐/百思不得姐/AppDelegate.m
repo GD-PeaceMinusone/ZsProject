@@ -2,12 +2,12 @@
 //  AppDelegate.m
 //  百思不得姐
 //
-//  Created by Jackeylove on 2017/3/6.
+//  Created by Jackeylove on 2017/3/4.
 //  Copyright © 2017年 Jackeylove. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "XMGTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = [[XMGTabBarController alloc]init];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

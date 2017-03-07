@@ -17,6 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = XMGCommonBgColor;
+    self.navigationItem.title = @"我的关注";
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(followClick) forControlEvents:UIControlEventTouchUpInside];
+    [button sizeToFit];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+}
+
+-(void)followClick {
+
+    XMGLogFunc
 }
 
 - (void)didReceiveMemoryWarning {

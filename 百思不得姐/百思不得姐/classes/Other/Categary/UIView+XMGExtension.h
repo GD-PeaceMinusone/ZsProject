@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (XMGExtension)
+@property (nonatomic,assign)CGSize xmg_size;
 @property (nonatomic,assign)CGFloat xmg_width;
 @property (nonatomic,assign)CGFloat xmg_height;
-@property (nonatomic,assign) CGFloat xmg_x;
-@property (nonatomic,assign) CGFloat xmg_y;
-@property (nonatomic,assign) CGFloat xmg_centerX;
-@property (nonatomic,assign) CGFloat xmg_centerY;
-@property (nonatomic,assign) CGFloat xmg_right;
-@property (nonatomic,assign) CGFloat xmg_bottom;
+@property (nonatomic,assign)CGFloat xmg_x;
+@property (nonatomic,assign)CGFloat xmg_y;
+@property (nonatomic,assign)CGFloat xmg_centerX;
+@property (nonatomic,assign)CGFloat xmg_centerY;
+@property (nonatomic,assign)CGFloat xmg_right;
+@property (nonatomic,assign)CGFloat xmg_bottom;
 @end

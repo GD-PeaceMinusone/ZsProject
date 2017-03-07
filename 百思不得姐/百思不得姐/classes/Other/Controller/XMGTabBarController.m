@@ -8,6 +8,11 @@
 
 #import "XMGTabBarController.h"
 #import "XMGTabBar.h"
+#import "XMGessenceViewController.h"
+#import "XMGMeViewController.h"
+#import "XMGFollowViewController.h"
+#import "XMGNewViewController.h"
+
 @interface XMGTabBarController ()
 //@property(nonatomic,strong)UIButton *publishButton;
 @end
@@ -33,6 +38,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupItemTitleTextAttributes];
+    /**添加子控制器**/
+    [self setupChildViewControllers];
+    /**更换默认tabBar**/
+    [self setValue:[[XMGTabBar alloc]init] forKey:@"tabBar"];
+    
+}
+
+-(void)setupItemTitleTextAttributes {
+
     UITabBarItem *item = [UITabBarItem appearance];
     //普通
     NSMutableDictionary *normalDict = [NSMutableDictionary dictionary];
@@ -44,41 +59,27 @@
     NSMutableDictionary *selectedDict = [NSMutableDictionary dictionary];
     selectedDict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     [item setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
+}
+
+-(void)setupChildViewControllers {
+
+    [self setupChildViewController:[[XMGessenceViewController alloc]init] title:@"精华" imageName:@"tabBar_essence_icon" selectedImageName:@"tabBar_essence_click_icon"];
     
-    [self setupChildViewController:[[UITableViewController alloc]init] title:@"精华" imageName:@"tabBar_essence_icon" selectedImageName:@"tabBar_essence_click_icon"];
-    
-    [self setupChildViewController:[[UIViewController alloc]init] title:@"新帖" imageName:@"tabBar_new_icon" selectedImageName:@"tabBar_new_click_icon"];
+    [self setupChildViewController:[[XMGNewViewController alloc]init] title:@"新帖" imageName:@"tabBar_new_icon" selectedImageName:@"tabBar_new_click_icon"];
     
     //    [self setupChildViewController:[[UIViewController alloc]init] title:nil imageName:nil selectedImageName:nil];
     
-    [self setupChildViewController:[[UITableViewController alloc]init] title:@"关注" imageName:@"tabBar_friendTrends_icon" selectedImageName:@"tabBar_friendTrends_click_icon"];
+    [self setupChildViewController:[[XMGFollowViewController alloc]init] title:@"关注" imageName:@"tabBar_friendTrends_icon" selectedImageName:@"tabBar_friendTrends_click_icon"];
     
-    [self setupChildViewController:[[UIViewController alloc]init] title:@"我" imageName:@"tabBar_me_icon" selectedImageName:@"tabBar_me_click_icon"];
-    
-    /**更换默认tabBar**/
-    [self setValue:[[XMGTabBar alloc]init] forKey:@"tabBar"];
-    
+    [self setupChildViewController:[[XMGMeViewController alloc]init] title:@"我" imageName:@"tabBar_me_icon" selectedImageName:@"tabBar_me_click_icon"];
 }
 
-//-(void)viewDidAppear:(BOOL)animated {
-//
-//    for (UIView *subView in self.tabBar.subviews) {
-//        if (subView.class != NSClassFromString(@"UITabBarButton")) {
-//            continue;
-//        }
-//        NSLog(@"%@", subView.class);
-//    }
-//
-//    [self.tabBar addSubview:self.publishButton];
-//}
 
 -(void)setupChildViewController:(UIViewController*)vc title:(NSString*)title imageName:(NSString*)imageName selectedImageName:(NSString*)selectedImageName {
     
     //    CGFloat red = arc4random_uniform(255)/255.0;
     //    CGFloat green = arc4random_uniform(255)/255.0;
     //    CGFloat blue = arc4random_uniform(255)/255.0;
-    
-    vc.view.backgroundColor = XMGRandomColor;
     
     if (imageName.length) {
         vc.tabBarItem.image = [UIImage imageNamed:imageName];
@@ -95,18 +96,5 @@
     
     XMGLogFunc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @end

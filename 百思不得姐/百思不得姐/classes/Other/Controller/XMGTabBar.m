@@ -21,7 +21,6 @@
         [publishButton setImage:[UIImage imageNamed:@"tabBar_publish_icon"]forState:UIControlStateNormal];
         [publishButton setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         // [publishButton sizeToFit];
-        publishButton.backgroundColor = XMGRandomColor;
         [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishButton];
         _publishButton = publishButton;
@@ -34,8 +33,8 @@
     
     [super layoutSubviews];
     
-    CGFloat buttonW = self.frame.size.width/5;
-    CGFloat buttonH = self.frame.size.height;
+    CGFloat buttonW = self.xmg_width/5;
+    CGFloat buttonH = self.xmg_height;
     CGFloat buttonY = 0;
     int buttonIndex = 0;
     
@@ -52,8 +51,10 @@
         buttonIndex++;
     }
     
-    self.publishButton.frame = CGRectMake(0, 0, buttonW, buttonH);
-    self.publishButton.center = CGPointMake(self.frame.size.width*0.5, buttonH*0.5);
+    self.publishButton.xmg_width = buttonW;
+    self.publishButton.xmg_height = buttonH;
+    self.publishButton.xmg_centerX = self.xmg_width*0.5;
+    self.publishButton.xmg_centerY = buttonH*0.5;
 }
 
 #pragma mark - 监听

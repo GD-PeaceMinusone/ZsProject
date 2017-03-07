@@ -13,6 +13,7 @@
 
 /**分类**/
 #import "UIView+XMGExtension.h"
+#import "XMGItemManager.h"
 /**日志**/
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__)

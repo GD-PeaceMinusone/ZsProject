@@ -1,30 +1,30 @@
 //
-//  XMGNewViewController.m
+//  XMGSettingViewController.m
 //  百思不得姐
 //
-//  Created by Jackeylove on 2017/3/6.
+//  Created by Jackeylove on 2017/3/7.
 //  Copyright © 2017年 Jackeylove. All rights reserved.
 //
 
-#import "XMGNewViewController.h"
+#import "XMGSettingViewController.h"
 
-@interface XMGNewViewController ()
+@interface XMGSettingViewController ()
 
 @end
 
-@implementation XMGNewViewController
+@implementation XMGSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = XMGCommonBgColor;
-    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    self.navigationItem.title = @"设置";
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" action:@selector(tagClick) target:self];
-}
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"自定义" style:UIBarButtonSystemItemDone target:self action:nil];
+  }
 
--(void)tagClick {
-    
-    XMGLogFunc
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

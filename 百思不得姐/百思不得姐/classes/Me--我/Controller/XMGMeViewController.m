@@ -7,7 +7,7 @@
 //
 
 #import "XMGMeViewController.h"
-
+#import "XMGSettingViewController.h"
 @interface XMGMeViewController ()
 
 @end
@@ -19,15 +19,16 @@
      self.view.backgroundColor = XMGCommonBgColor;
      self.navigationItem.title = @"我的";
     
-    UIBarButtonItem *settingItem = [XMGItemManager itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" action:@selector(settingClick) target: self];
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" action:@selector(settingClick) target: self];
     
-    UIBarButtonItem *moonItem = [XMGItemManager itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" action:@selector(moonClick) target: self];
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" action:@selector(moonClick) target: self];
     
     self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
 }
 
 -(void)settingClick {
-
+    XMGSettingViewController *vc = [[XMGSettingViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)moonClick {

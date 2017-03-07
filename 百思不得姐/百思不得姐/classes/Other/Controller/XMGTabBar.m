@@ -56,6 +56,14 @@
     self.publishButton.xmg_centerX = self.xmg_width*0.5;
     self.publishButton.xmg_centerY = buttonH*0.5;
 }
+//通过代码创建的控件最终会调用该方法 所以在该方法里修改tabBar的背景图
+-(instancetype)initWithFrame:(CGRect)frame {
+
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundImage = [UIImage imageNamed:@"tabbar-light"];
+    }
+    return self;
+}
 
 #pragma mark - 监听
 

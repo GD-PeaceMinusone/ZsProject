@@ -19,7 +19,7 @@
     self.view.backgroundColor = XMGCommonBgColor;
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
   
-    self.navigationItem.leftBarButtonItem = [XMGItemManager itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" action:@selector(tagClick) target:self];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" action:@selector(tagClick) target:self];
 }
 
 -(void)tagClick {

@@ -1,5 +1,5 @@
 //
-//  XMGFollowViewController.h
+//  XMGQuickLoginButton.h
 //  百思不得姐
 //
 //  Created by Jackeylove on 2017/3/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XMGFollowViewController : UIViewController
+@interface XMGQuickLoginButton : UIButton
 
 @end

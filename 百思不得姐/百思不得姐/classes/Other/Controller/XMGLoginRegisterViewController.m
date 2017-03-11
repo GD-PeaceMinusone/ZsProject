@@ -10,6 +10,7 @@
 
 @interface XMGLoginRegisterViewController ()
 //@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+//@property (weak, nonatomic) IBOutlet UITextField *phoneField;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftMargin;
 @end
@@ -20,7 +21,7 @@
     [super viewDidLoad];
 //    [self.loginButton setValue:@5 forKeyPath:@"layer.cornerRadius"];
 //    [self.loginButton setValue:@YES forKeyPath:@"layer.masksToBounds"];
-//    
+//    self.phoneField.tintColor = [UIColor whiteColor];
 }
 - (IBAction)showLoginOrRegister:(UIButton *)button {
     [self.view endEditing:YES];

@@ -21,7 +21,7 @@
     self.navigationItem.title = @"我的关注";
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" action:@selector(followClick) target:self];
-    
+        
 //    UILabel *label = [[UILabel alloc]init];
 //    label.frame = CGRectMake(100, 100, 200, 200);
 //    [self.view addSubview:label];
@@ -61,7 +61,7 @@
 
 -(void)followClick {
     
-    XMGLogFunc
+
     XMGRecomendFollowViewController *vc = [[XMGRecomendFollowViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }

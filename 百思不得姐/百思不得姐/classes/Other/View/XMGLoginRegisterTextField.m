@@ -10,7 +10,7 @@
 
 static NSString *const XMGPlaceholderColorKey = @"placeholderLabel.textColor";
 @interface XMGLoginRegisterTextField ()<UITextFieldDelegate>
-
+@property(nonatomic,strong)id observer;
 @end
 
 @implementation XMGLoginRegisterTextField
@@ -19,22 +19,43 @@ static NSString *const XMGPlaceholderColorKey = @"placeholderLabel.textColor";
 
     [super awakeFromNib];
     self.tintColor = [UIColor whiteColor];
-    self.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginEditing) name:UITextFieldTextDidBeginEditingNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endEditing) name:UITextFieldTextDidEndEditingNotification object:self];
+    
+   self.observer= [[NSNotificationCenter defaultCenter] addObserverForName:UITextFieldTextDidBeginEditingNotification object:self queue:[[NSOperationQueue alloc]init] usingBlock:^(NSNotification * _Nonnull note) {
+        
+        
+    }];
+//    self.delegate = self;
 //    [self addTarget:self action:@selector(editingDidBegin) forControlEvents:UIControlEventEditingDidBegin];
 //    [self addTarget:self action:@selector(editingDidEnd) forControlEvents:UIControlEventEditingDidEnd ];
 }
 
 #pragma mark - UITextFieldDelegate
 
--(void)textFieldDidBeginEditing:(UITextField *)textField {
-
+-(void)beginEditing {
     [self setValue:[UIColor whiteColor] forKeyPath:XMGPlaceholderColorKey];
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField {
+-(void)endEditing {
 
     [self setValue:[UIColor grayColor] forKeyPath:XMGPlaceholderColorKey];
 }
+-(void)dealloc {
+
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [[NSNotificationCenter defaultCenter]removeObserver:self.observer];
+}
+//-(void)textFieldDidBeginEditing:(UITextField *)textField {
+//
+//    [self setValue:[UIColor whiteColor] forKeyPath:XMGPlaceholderColorKey];
+//}
+//
+//-(void)textFieldDidEndEditing:(UITextField *)textField {
+//
+//    [self setValue:[UIColor grayColor] forKeyPath:XMGPlaceholderColorKey];
+//}
 
 //-(void)editingDidBegin {
 //

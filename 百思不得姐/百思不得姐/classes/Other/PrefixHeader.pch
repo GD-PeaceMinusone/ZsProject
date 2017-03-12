@@ -11,10 +11,11 @@
 
 #ifdef __OBJC__
 
-/**分类**/
+/**分类和其他接口**/
 #import "UIView+XMGExtension.h"
 #import "UIBarButtonItem+XMGExtension.h"
-#import "UIButton+XMGExtension.h"
+#import "UITextField+XMGExtension.h"
+#import "XMGConst.h"
 /**日志**/
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__)

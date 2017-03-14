@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29025C8B86D0CEC685D02CFA /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDC90FFB4DE88EA957A73E2 /* libPods-百思不得姐.a */; };
 		530D8DB31E6FB1E600920E13 /* XMGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D8DB21E6FB1E600920E13 /* XMGFollowViewController.m */; };
 		530D8DB51E6FB21600920E13 /* XMGFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530D8DB41E6FB21600920E13 /* XMGFollowViewController.xib */; };
 		530D8DB91E6FC38D00920E13 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D8DB71E6FC38D00920E13 /* XMGLoginRegisterViewController.m */; };
@@ -14,9 +15,12 @@
 		530D8DBD1E6FE4EE00920E13 /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D8DBB1E6FE4EE00920E13 /* XMGTabBar.m */; };
 		530D8DC01E6FE57300920E13 /* XMGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D8DBF1E6FE57300920E13 /* XMGQuickLoginButton.m */; };
 		530D8DC31E704C0300920E13 /* XMGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 530D8DC21E704C0300920E13 /* XMGLoginRegisterTextField.m */; };
+		5314D9961E77B61700F5C6F3 /* XMGMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314D9951E77B61700F5C6F3 /* XMGMeSquareButton.m */; };
 		53445BF11E73B82900DEFE68 /* UITextField+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF01E73B82900DEFE68 /* UITextField+XMGExtension.m */; };
 		53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF31E75427A00DEFE68 /* XMGMeCell.m */; };
 		53445BF71E7544EB00DEFE68 /* XMGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF61E7544EB00DEFE68 /* XMGConst.m */; };
+		53445BFA1E75643400DEFE68 /* XMGMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF91E75643400DEFE68 /* XMGMeFooterView.m */; };
+		5384FFB61E76D8880046E1B8 /* XMGMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */; };
 		538937C11E6DAE8300FE7322 /* XMGessenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389379F1E6DAE8300FE7322 /* XMGessenceViewController.m */; };
 		538937C31E6DAE8300FE7322 /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538937AB1E6DAE8300FE7322 /* XMGMeViewController.m */; };
 		538937C41E6DAE8300FE7322 /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538937B11E6DAE8300FE7322 /* XMGNewViewController.m */; };
@@ -52,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2E05234887AADD555C9ABE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		530D8DB11E6FB1E600920E13 /* XMGFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFollowViewController.h; sourceTree = "<group>"; };
 		530D8DB21E6FB1E600920E13 /* XMGFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFollowViewController.m; sourceTree = "<group>"; };
 		530D8DB41E6FB21600920E13 /* XMGFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFollowViewController.xib; sourceTree = "<group>"; };
@@ -64,12 +69,18 @@
 		530D8DBF1E6FE57300920E13 /* XMGQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGQuickLoginButton.m; sourceTree = "<group>"; };
 		530D8DC11E704C0300920E13 /* XMGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterTextField.h; sourceTree = "<group>"; };
 		530D8DC21E704C0300920E13 /* XMGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterTextField.m; sourceTree = "<group>"; };
+		5314D9941E77B61700F5C6F3 /* XMGMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeSquareButton.h; sourceTree = "<group>"; };
+		5314D9951E77B61700F5C6F3 /* XMGMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeSquareButton.m; sourceTree = "<group>"; };
 		53445BEF1E73B82900DEFE68 /* UITextField+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XMGExtension.h"; sourceTree = "<group>"; };
 		53445BF01E73B82900DEFE68 /* UITextField+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XMGExtension.m"; sourceTree = "<group>"; };
 		53445BF21E75427A00DEFE68 /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
 		53445BF31E75427A00DEFE68 /* XMGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeCell.m; sourceTree = "<group>"; };
 		53445BF51E7544EB00DEFE68 /* XMGConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGConst.h; sourceTree = "<group>"; };
 		53445BF61E7544EB00DEFE68 /* XMGConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGConst.m; sourceTree = "<group>"; };
+		53445BF81E75643400DEFE68 /* XMGMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeFooterView.h; sourceTree = "<group>"; };
+		53445BF91E75643400DEFE68 /* XMGMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeFooterView.m; sourceTree = "<group>"; };
+		5384FFB41E76D8880046E1B8 /* XMGMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeSquare.h; sourceTree = "<group>"; };
+		5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeSquare.m; sourceTree = "<group>"; };
 		5389379E1E6DAE8300FE7322 /* XMGessenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGessenceViewController.h; sourceTree = "<group>"; };
 		5389379F1E6DAE8300FE7322 /* XMGessenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGessenceViewController.m; sourceTree = "<group>"; };
 		538937AA1E6DAE8300FE7322 /* XMGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeViewController.h; sourceTree = "<group>"; };
@@ -103,6 +114,8 @@
 		53A617091E6D6144003FD089 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A6170D1E6D6144003FD089 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		53A6170F1E6D6144003FD089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABDC90FFB4DE88EA957A73E2 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6056699F3AD8D92C7491153 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29025C8B86D0CEC685D02CFA /* libPods-百思不得姐.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +144,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B3FF9EE8692265CD773EC17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6056699F3AD8D92C7491153 /* Pods-百思不得姐.debug.xcconfig */,
+				0A2E05234887AADD555C9ABE /* Pods-百思不得姐.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		41F88AE5312F6B1E9AD2C196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABDC90FFB4DE88EA957A73E2 /* libPods-百思不得姐.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5389379B1E6DAE8300FE7322 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +266,8 @@
 		538937AC1E6DAE8300FE7322 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5384FFB41E76D8880046E1B8 /* XMGMeSquare.h */,
+				5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +277,10 @@
 			children = (
 				53445BF21E75427A00DEFE68 /* XMGMeCell.h */,
 				53445BF31E75427A00DEFE68 /* XMGMeCell.m */,
+				53445BF81E75643400DEFE68 /* XMGMeFooterView.h */,
+				53445BF91E75643400DEFE68 /* XMGMeFooterView.m */,
+				5314D9941E77B61700F5C6F3 /* XMGMeSquareButton.h */,
+				5314D9951E77B61700F5C6F3 /* XMGMeSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +382,8 @@
 				53A617011E6D6144003FD089 /* 百思不得姐Tests */,
 				53A6170C1E6D6144003FD089 /* 百思不得姐UITests */,
 				53A616E61E6D6144003FD089 /* Products */,
+				3B3FF9EE8692265CD773EC17 /* Pods */,
+				41F88AE5312F6B1E9AD2C196 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -402,9 +441,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A617121E6D6144003FD089 /* Build configuration list for PBXNativeTarget "百思不得姐" */;
 			buildPhases = (
+				690B0DFA311C52FA407A0A17 /* [CP] Check Pods Manifest.lock */,
 				53A616E11E6D6144003FD089 /* Sources */,
 				53A616E21E6D6144003FD089 /* Frameworks */,
 				53A616E31E6D6144003FD089 /* Resources */,
+				A273B4E68ED486125B856E29 /* [CP] Embed Pods Frameworks */,
+				A6451C27C22FCECFA49BFFC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -523,6 +565,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		690B0DFA311C52FA407A0A17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A273B4E68ED486125B856E29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6451C27C22FCECFA49BFFC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		53A616E11E6D6144003FD089 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -535,13 +625,16 @@
 				538937DD1E6E8F4400FE7322 /* XMGNavigationController.m in Sources */,
 				530D8DC31E704C0300920E13 /* XMGLoginRegisterTextField.m in Sources */,
 				538937C51E6DAE8300FE7322 /* AppDelegate.m in Sources */,
+				5384FFB61E76D8880046E1B8 /* XMGMeSquare.m in Sources */,
 				530D8DB91E6FC38D00920E13 /* XMGLoginRegisterViewController.m in Sources */,
 				538937C41E6DAE8300FE7322 /* XMGNewViewController.m in Sources */,
+				53445BFA1E75643400DEFE68 /* XMGMeFooterView.m in Sources */,
 				53A616EA1E6D6144003FD089 /* main.m in Sources */,
 				53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */,
 				538937C31E6DAE8300FE7322 /* XMGMeViewController.m in Sources */,
 				538937C11E6DAE8300FE7322 /* XMGessenceViewController.m in Sources */,
 				53445BF11E73B82900DEFE68 /* UITextField+XMGExtension.m in Sources */,
+				5314D9961E77B61700F5C6F3 /* XMGMeSquareButton.m in Sources */,
 				538937CE1E6E662000FE7322 /* UIBarButtonItem+XMGExtension.m in Sources */,
 				538937D11E6E6CC000FE7322 /* XMGRecomendFollowViewController.m in Sources */,
 				53445BF71E7544EB00DEFE68 /* XMGConst.m in Sources */,
@@ -675,6 +768,7 @@
 		};
 		53A617131E6D6144003FD089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6056699F3AD8D92C7491153 /* Pods-百思不得姐.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -689,6 +783,7 @@
 		};
 		53A617141E6D6144003FD089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A2E05234887AADD555C9ABE /* Pods-百思不得姐.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

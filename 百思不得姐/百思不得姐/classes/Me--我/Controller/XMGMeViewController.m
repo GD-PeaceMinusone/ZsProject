@@ -9,6 +9,7 @@
 #import "XMGMeViewController.h"
 #import "XMGSettingViewController.h"
 #import "XMGMeCell.h"
+#import "XMGMeFooterView.h"
 @interface XMGMeViewController ()
 
 @end
@@ -25,6 +26,8 @@
     
     [self setupTableView];
     [self setupNavigation];
+//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0);
+  
 }
 
 -(void)setupTableView{
@@ -34,11 +37,8 @@
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = XMGMargin;
     self.tableView.contentInset =UIEdgeInsetsMake(XMGMargin-35, 0, 0, 0) ;
-    
-    UIView *footerView = [[UIView alloc]init];
-    footerView.backgroundColor = [UIColor redColor];
-    footerView.xmg_height = 200;
-    self.tableView.tableFooterView = footerView;
+
+    self.tableView.tableFooterView =[[XMGMeFooterView alloc]init];
 }
 
 -(void)setupNavigation {

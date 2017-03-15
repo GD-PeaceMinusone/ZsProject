@@ -19,6 +19,7 @@
 		5314D99A1E77D9CE00F5C6F3 /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314D9981E77D9CE00F5C6F3 /* XMGWebViewController.m */; };
 		5314D99B1E77D9CE00F5C6F3 /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5314D9991E77D9CE00F5C6F3 /* XMGWebViewController.xib */; };
 		5314D99E1E78D66400F5C6F3 /* NSString+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314D99D1E78D66400F5C6F3 /* NSString+XMGExtension.m */; };
+		5314D9A11E78EB2E00F5C6F3 /* XMGClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314D9A01E78EB2E00F5C6F3 /* XMGClearCacheCell.m */; };
 		53445BF11E73B82900DEFE68 /* UITextField+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF01E73B82900DEFE68 /* UITextField+XMGExtension.m */; };
 		53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF31E75427A00DEFE68 /* XMGMeCell.m */; };
 		53445BF71E7544EB00DEFE68 /* XMGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF61E7544EB00DEFE68 /* XMGConst.m */; };
@@ -79,6 +80,8 @@
 		5314D9991E77D9CE00F5C6F3 /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
 		5314D99C1E78D66400F5C6F3 /* NSString+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMGExtension.h"; sourceTree = "<group>"; };
 		5314D99D1E78D66400F5C6F3 /* NSString+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMGExtension.m"; sourceTree = "<group>"; };
+		5314D99F1E78EB2E00F5C6F3 /* XMGClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGClearCacheCell.h; sourceTree = "<group>"; };
+		5314D9A01E78EB2E00F5C6F3 /* XMGClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGClearCacheCell.m; sourceTree = "<group>"; };
 		53445BEF1E73B82900DEFE68 /* UITextField+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XMGExtension.h"; sourceTree = "<group>"; };
 		53445BF01E73B82900DEFE68 /* UITextField+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XMGExtension.m"; sourceTree = "<group>"; };
 		53445BF21E75427A00DEFE68 /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				53445BF91E75643400DEFE68 /* XMGMeFooterView.m */,
 				5314D9941E77B61700F5C6F3 /* XMGMeSquareButton.h */,
 				5314D9951E77B61700F5C6F3 /* XMGMeSquareButton.m */,
+				5314D99F1E78EB2E00F5C6F3 /* XMGClearCacheCell.h */,
+				5314D9A01E78EB2E00F5C6F3 /* XMGClearCacheCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -635,6 +640,7 @@
 				530D8DB31E6FB1E600920E13 /* XMGFollowViewController.m in Sources */,
 				538937DA1E6E8D8F00FE7322 /* UIButton+XMGExtension.m in Sources */,
 				538937C61E6DAE8300FE7322 /* UIView+XMGExtension.m in Sources */,
+				5314D9A11E78EB2E00F5C6F3 /* XMGClearCacheCell.m in Sources */,
 				538937C81E6DAE8300FE7322 /* XMGTabBarController.m in Sources */,
 				538937DD1E6E8F4400FE7322 /* XMGNavigationController.m in Sources */,
 				530D8DC31E704C0300920E13 /* XMGLoginRegisterTextField.m in Sources */,

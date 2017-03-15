@@ -8,9 +8,12 @@
 
 #import "XMGSettingViewController.h"
 #import <SDImageCache.h>
+#import "XMGClearCacheCell.h"
 @interface XMGSettingViewController ()
 
 @end
+
+static NSString * const XMGClearCacheCellID = @"XMGClearCacheCell";
 
 @implementation XMGSettingViewController
 
@@ -23,9 +26,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = XMGCommonBgColor;
     self.navigationItem.title = @"设置";
-    [self getCacheSize];
-    [self getCacheSize2];
-    XMGLog(@"%zd", @"/Users/jackeylove/Desktop/简书 3.3.0".fileSize);
+    //注册ID为const 常量的cell
+    [self.tableView registerClass:[XMGClearCacheCell class] forCellReuseIdentifier:XMGClearCacheCellID];
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"自定义" style:UIBarButtonSystemItemDone target:self action:nil];
   }
 
@@ -71,16 +73,9 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    static NSString *ID = @"setting";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
-//    [[SDImageCache sharedImageCache] getSize];
-    cell.textLabel.text = @"清除缓存";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    XMGLog(@"%@", NSHomeDirectory());
+    //取出cell
+    XMGClearCacheCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGClearCacheCellID];
+    //返回cell
     return cell;
 }
 

@@ -13,13 +13,24 @@
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>
 #import "XMGMeSquareButton.h"
+#import "XMGWebViewController.h"
+#import <SafariServices/SafariServices.h>
 #define maxColsCount 4
 
 @interface XMGMeFooterView ()
 @property(nonatomic,strong)NSMutableArray *squares;
+//@property(nonatomic,strong)NSMutableDictionary<NSString*,XMGMeSquare*> *allSquare;
 @end
 
 @implementation XMGMeFooterView
+
+//-(NSMutableDictionary<NSString *,XMGMeSquare *> *)allSquare {
+//
+//    if (!_allSquare) {
+//        _allSquare = [NSMutableDictionary dictionary];
+//    }
+//    return _allSquare;
+//}
 
 -(instancetype)initWithFrame:(CGRect)frame {
 
@@ -69,10 +80,9 @@
     CGFloat buttonH = buttonW;
     
     for (NSUInteger i =0; i < count; i++) {
-        XMGMeSquare *square = squares[i];
+//        self.allSquare[square.name] = square;
         //创建按钮
         XMGMeSquareButton *button = [XMGMeSquareButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateNormal];
         [self addSubview:button];
         //设置frame
         button.xmg_x = (i % maxColsCount) * buttonW;
@@ -81,8 +91,7 @@
         button.xmg_height= buttonH;
         //设置数据
 //        button.backgroundColor = XMGRandomColor;
-        [button setTitle:square.name forState:UIControlStateNormal];
-        [button sd_setImageWithURL:[NSURL URLWithString:square.icon] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"setup-head-default"]];
+        button.square = squares[i];
         [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
         
 //        [button setImage:[UIImage imageNamed:@"setup-head-default"] forState:UIControlStateNormal];
@@ -99,8 +108,41 @@
 }
 
 -(void)click:(XMGMeSquareButton *)button {
+   XMGMeSquare *square= button.square;
 
+    if ([square.url hasPrefix:@"http"]) {
+
+         SFSafariViewController *webView = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:square.url]];
+         webView.navigationItem.title = square.name;
+        //XMGWebViewController *webView = [[XMGWebViewController alloc]init];
+//        webView.url = square.url;
+        //获取"Me"模块对应的导航控制器
+        UITabBarController *tabBarVc =(UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+        [tabBarVc presentViewController:webView animated:YES completion:nil];
+//        UINavigationController *vc = tabBarVc.selectedViewController;
+//        [vc pushViewController:webView animated:YES];
+        
+    }else if([square.url hasPrefix:@"mod"]) {
+        if ([square.url hasSuffix:@"BDJ_To_Check"]) {
+            XMGLog(@"跳转到[审帖]界面");
+        }else if([square.url hasSuffix:@"BDJ_To_RecentHot" ]){
+            XMGLog(@"跳转到[每日排行]界面");
+        }else {
+            XMGLog(@"跳转到其他界面");
+        }
+    
+    }else {
+        XMGLog(@"不是http 或mod协议");
+    }
     
 }
+
+
+
+
+
+
+
+
 
 @end

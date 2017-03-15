@@ -1,5 +1,5 @@
 //
-//  XMGMeSquareButton.h
+//  XMGWebViewController.h
 //  百思不得姐
 //
 //  Created by Jackeylove on 2017/3/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class XMGMeSquare;
 
-@interface XMGMeSquareButton : UIButton
-@property(nonatomic,strong)XMGMeSquare *square;
+@interface XMGWebViewController : UIViewController
+@property(nonatomic,strong)NSString *url;
 @end

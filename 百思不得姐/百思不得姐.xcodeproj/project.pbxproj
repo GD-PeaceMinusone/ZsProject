@@ -24,6 +24,10 @@
 		53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF31E75427A00DEFE68 /* XMGMeCell.m */; };
 		53445BF71E7544EB00DEFE68 /* XMGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF61E7544EB00DEFE68 /* XMGConst.m */; };
 		53445BFA1E75643400DEFE68 /* XMGMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF91E75643400DEFE68 /* XMGMeFooterView.m */; };
+		534841271E790FB8005E8138 /* XMGSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 534841261E790FB8005E8138 /* XMGSettingCell.m */; };
+		534841371E79267B005E8138 /* XMGPravicyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 534841351E79267B005E8138 /* XMGPravicyCell.m */; };
+		534841381E79267B005E8138 /* XMGPravicyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534841361E79267B005E8138 /* XMGPravicyCell.xib */; };
+		5348413B1E7973FD005E8138 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5348413A1E7973FD005E8138 /* XMGTitleButton.m */; };
 		5384FFB61E76D8880046E1B8 /* XMGMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */; };
 		538937C11E6DAE8300FE7322 /* XMGessenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389379F1E6DAE8300FE7322 /* XMGessenceViewController.m */; };
 		538937C31E6DAE8300FE7322 /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538937AB1E6DAE8300FE7322 /* XMGMeViewController.m */; };
@@ -90,6 +94,13 @@
 		53445BF61E7544EB00DEFE68 /* XMGConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGConst.m; sourceTree = "<group>"; };
 		53445BF81E75643400DEFE68 /* XMGMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeFooterView.h; sourceTree = "<group>"; };
 		53445BF91E75643400DEFE68 /* XMGMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeFooterView.m; sourceTree = "<group>"; };
+		534841251E790FB8005E8138 /* XMGSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSettingCell.h; sourceTree = "<group>"; };
+		534841261E790FB8005E8138 /* XMGSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSettingCell.m; sourceTree = "<group>"; };
+		534841341E79267B005E8138 /* XMGPravicyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPravicyCell.h; sourceTree = "<group>"; };
+		534841351E79267B005E8138 /* XMGPravicyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPravicyCell.m; sourceTree = "<group>"; };
+		534841361E79267B005E8138 /* XMGPravicyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPravicyCell.xib; sourceTree = "<group>"; };
+		534841391E7973FD005E8138 /* XMGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTitleButton.h; sourceTree = "<group>"; };
+		5348413A1E7973FD005E8138 /* XMGTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTitleButton.m; sourceTree = "<group>"; };
 		5384FFB41E76D8880046E1B8 /* XMGMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeSquare.h; sourceTree = "<group>"; };
 		5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeSquare.m; sourceTree = "<group>"; };
 		5389379E1E6DAE8300FE7322 /* XMGessenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGessenceViewController.h; sourceTree = "<group>"; };
@@ -213,6 +224,8 @@
 		538937A11E6DAE8300FE7322 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				534841391E7973FD005E8138 /* XMGTitleButton.h */,
+				5348413A1E7973FD005E8138 /* XMGTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +310,11 @@
 				5314D9951E77B61700F5C6F3 /* XMGMeSquareButton.m */,
 				5314D99F1E78EB2E00F5C6F3 /* XMGClearCacheCell.h */,
 				5314D9A01E78EB2E00F5C6F3 /* XMGClearCacheCell.m */,
+				534841251E790FB8005E8138 /* XMGSettingCell.h */,
+				534841261E790FB8005E8138 /* XMGSettingCell.m */,
+				534841341E79267B005E8138 /* XMGPravicyCell.h */,
+				534841351E79267B005E8138 /* XMGPravicyCell.m */,
+				534841361E79267B005E8138 /* XMGPravicyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +583,7 @@
 				53A616F51E6D6144003FD089 /* Assets.xcassets in Resources */,
 				5314D99B1E77D9CE00F5C6F3 /* XMGWebViewController.xib in Resources */,
 				530D8DBA1E6FC38D00920E13 /* XMGLoginRegisterViewController.xib in Resources */,
+				534841381E79267B005E8138 /* XMGPravicyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,11 +663,14 @@
 				538937C81E6DAE8300FE7322 /* XMGTabBarController.m in Sources */,
 				538937DD1E6E8F4400FE7322 /* XMGNavigationController.m in Sources */,
 				530D8DC31E704C0300920E13 /* XMGLoginRegisterTextField.m in Sources */,
+				534841271E790FB8005E8138 /* XMGSettingCell.m in Sources */,
 				538937C51E6DAE8300FE7322 /* AppDelegate.m in Sources */,
 				5384FFB61E76D8880046E1B8 /* XMGMeSquare.m in Sources */,
 				530D8DB91E6FC38D00920E13 /* XMGLoginRegisterViewController.m in Sources */,
+				5348413B1E7973FD005E8138 /* XMGTitleButton.m in Sources */,
 				538937C41E6DAE8300FE7322 /* XMGNewViewController.m in Sources */,
 				53445BFA1E75643400DEFE68 /* XMGMeFooterView.m in Sources */,
+				534841371E79267B005E8138 /* XMGPravicyCell.m in Sources */,
 				53A616EA1E6D6144003FD089 /* main.m in Sources */,
 				53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */,
 				538937C31E6DAE8300FE7322 /* XMGMeViewController.m in Sources */,
@@ -796,7 +818,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jackeylove.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -811,7 +833,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jackeylove.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

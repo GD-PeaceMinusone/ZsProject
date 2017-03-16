@@ -9,11 +9,15 @@
 #import "XMGSettingViewController.h"
 #import <SDImageCache.h>
 #import "XMGClearCacheCell.h"
+#import "XMGSettingCell.h"
+#import "XMGPravicyCell.h"
 @interface XMGSettingViewController ()
 
 @end
 
-static NSString * const XMGClearCacheCellID = @"XMGClearCacheCell";
+static NSString * const XMGClearCacheCellID = @"clear_cache";
+static NSString * const XMGSettingCellID = @"setting";
+static NSString * const XMGPravicyCellID = @"privacy";
 
 @implementation XMGSettingViewController
 
@@ -28,6 +32,9 @@ static NSString * const XMGClearCacheCellID = @"XMGClearCacheCell";
     self.navigationItem.title = @"设置";
     //注册ID为const 常量的cell
     [self.tableView registerClass:[XMGClearCacheCell class] forCellReuseIdentifier:XMGClearCacheCellID];
+    //注册其他类型的cell
+    [self.tableView registerClass:[XMGSettingCell class] forCellReuseIdentifier:XMGSettingCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGPravicyCell class]) bundle:nil] forCellReuseIdentifier:XMGPravicyCellID];
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"自定义" style:UIBarButtonSystemItemDone target:self action:nil];
   }
 
@@ -64,19 +71,47 @@ static NSString * const XMGClearCacheCellID = @"XMGClearCacheCell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    if (section == 0) {
+        return 5;
+    }else {
+    
+        return 1;
+    }
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //取出cell
-    XMGClearCacheCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGClearCacheCellID];
-    //返回cell
-    return cell;
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
+    if(indexPath.section == 0){
+    if (indexPath.row == 0) {
+        
+        return [tableView dequeueReusableCellWithIdentifier:XMGClearCacheCellID];
+        
+    }else {
+    
+        XMGSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGSettingCellID];
+        if (indexPath.row == 1) {
+            cell.textLabel.text = @"检查更新";
+            
+        }else if(indexPath.row == 2){
+            cell.textLabel.text = @"给我们评分";
+        
+        }else if(indexPath.row == 3){
+            cell.textLabel.text = @"推送设置";
+        
+        }else{
+            cell.textLabel.text = @"关于我们";
+        }
+        return cell;
+    }
+    }else {
+    
+        return [tableView dequeueReusableCellWithIdentifier:XMGPravicyCellID];
+    }
+    
 }
 
 @end

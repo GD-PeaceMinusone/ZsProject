@@ -8,10 +8,17 @@
 
 #import "XMGessenceViewController.h"
 #import "XMGTitleButton.h"
+#import "XMGAllTableViewController.h"
+#import "XMGVideoTableViewController.h"
+#import "XMGVoiceTableViewController.h"
+#import "XMGPictureTableViewController.h"
+#import "XMGWordTableViewController.h"
 
-@interface XMGessenceViewController ()
+@interface XMGessenceViewController () <UIScrollViewDelegate>
 @property(nonatomic,strong)XMGTitleButton *selectedTitleButton;
 @property(nonatomic,strong)UIView *indicatorView;
+@property(nonatomic,weak)UIScrollView *scrollView;
+@property(nonatomic,weak)UIView *titleView;
 @end
 
 @implementation XMGessenceViewController
@@ -19,8 +26,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigation];
+    [self setupChildViewControllers];
     [self setupScrollView];
     [self setupTitleView];
+    
+    //第一次来到界面便显示"全部"标签内容
+    [self addChildVc];
+}
+
+-(void)setupChildViewControllers {
+
+    XMGAllTableViewController *all = [[XMGAllTableViewController alloc]init];
+    [self addChildViewController:all];
+    XMGVideoTableViewController *video = [[XMGVideoTableViewController alloc]init];
+    [self addChildViewController:video];
+    XMGVoiceTableViewController *voice = [[XMGVoiceTableViewController alloc]init];
+    [self addChildViewController:voice];
+    XMGPictureTableViewController *picture = [[XMGPictureTableViewController alloc]init];
+    [self addChildViewController:picture];
+    XMGWordTableViewController *word = [[XMGWordTableViewController alloc]init];
+    [self addChildViewController:word];
 }
 
 -(void)setupNavigation {
@@ -31,14 +56,37 @@
 
 -(void)setupScrollView {
     UIScrollView *scrollView = [[UIScrollView alloc]init];
+    self.automaticallyAdjustsScrollViewInsets =NO;
     scrollView.frame = self.view.bounds;
-//    scrollView.backgroundColor = XMGRandomColor;
+    scrollView.pagingEnabled = YES;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * scrollView.xmg_width, 0);
+    scrollView.delegate = self;
+    self.scrollView = scrollView;
     [self.view addSubview:scrollView];
+    
+//    NSInteger count = self.childViewControllers.count;
+//    for (NSInteger i =0; i<count; i++) {
+//        UITableView *view = (UITableView*)self.childViewControllers[i].view;
+//        view.xmg_x = i * view.xmg_width;
+//        //view 的y默认为20 将其赋值为0
+//        view.xmg_y = 0;
+//        view.xmg_height = scrollView.xmg_height;
+//        view.backgroundColor = XMGRandomColor;
+//        [scrollView addSubview:view];
+//        
+//        //设置tableView 的内边距
+//        view.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+//        view.scrollIndicatorInsets = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+//    }
+    
 }
 
 -(void)setupTitleView {
     //标题栏
     UIView *titleView = [[UIView alloc]init];
+    self.titleView = titleView;
     titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2 ];
     titleView.frame = CGRectMake(0, 64, self.view.xmg_width, 35);
     [self.view addSubview:titleView];
@@ -53,11 +101,12 @@
         //设置按钮
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = i;
         button.frame = CGRectMake(i * buttonW, 0, buttonW, buttonH);
         [titleView addSubview:button];
     }
     //取出按钮
-    XMGTitleButton *button = titleView.subviews.lastObject;
+    XMGTitleButton *button = titleView.subviews.firstObject;
    //创建指示器
     UIView *indicatorView = [[UIView alloc]init];
     indicatorView.backgroundColor = [button titleColorForState:UIControlStateSelected];
@@ -65,6 +114,15 @@
     indicatorView.xmg_y = titleView.xmg_height - indicatorView.xmg_height;
     [titleView addSubview:indicatorView];
     self.indicatorView = indicatorView;
+    
+    //让titleLabel的宽度提前计算好 防止indicator加载失败
+    [button.titleLabel sizeToFit];
+    self.indicatorView.xmg_width = button.titleLabel.xmg_width;
+    self.indicatorView.xmg_centerX = button.xmg_centerX;
+    
+    //默认选中第一个按钮
+    button.selected = YES;
+    self.selectedTitleButton = button;
 }
 #pragma mark - 监听点击
 
@@ -74,30 +132,56 @@
     self.selectedTitleButton = button;
     
     [UIView animateWithDuration:0.25 animations:^{
-//        self.indicatorView.xmg_width =[button.currentTitle sizeWithAttributes:@{NSFontAttributeName:button.titleLabel.font}].width;
+        
         self.indicatorView.xmg_width = button.titleLabel.xmg_width;
         self.indicatorView.xmg_centerX = button.xmg_centerX;
         
     }];
+    
+    //点击时让scrollView 滚动到相应位置
+    /*最好先拿出scrollView 的contentOffset*/
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = button.tag * self.scrollView.xmg_width;
+    [self.scrollView setContentOffset:offset animated:YES];
 }
 -(void)tagClick {
 
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 添加子控制器
+-(void)addChildVc {
+    NSInteger index =self.scrollView.contentOffset.x / self.scrollView.xmg_width;
+    UIViewController *childVc = self.childViewControllers[index];
+    childVc.view.xmg_x = index * self.scrollView.xmg_width;
+    childVc.view.xmg_y = 0;
+    childVc.view.xmg_width = self.scrollView.xmg_width;
+    childVc.view.xmg_height = self.scrollView.xmg_height;
+    [self.scrollView addSubview:childVc.view];
+    
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - <UIScrollViewDelegate>
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ * 调用setContenInset 方法时
+ */
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+
+    [self addChildVc];
 }
-*/
 
+/**
+ *  人为拖动scrollView
+ */
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    //选中点击对应的按钮
+    NSUInteger index = self.scrollView.contentOffset.x / self.scrollView.xmg_width;
+    XMGTitleButton *button = self.titleView.subviews[index];
+    [self titleClick:button];
+    
+    //添加子控制器
+    [self addChildVc];
+}
 @end

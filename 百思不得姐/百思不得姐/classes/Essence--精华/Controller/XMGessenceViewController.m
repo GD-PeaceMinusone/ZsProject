@@ -153,10 +153,19 @@
 -(void)addChildVc {
     NSInteger index =self.scrollView.contentOffset.x / self.scrollView.xmg_width;
     UIViewController *childVc = self.childViewControllers[index];
-    childVc.view.xmg_x = index * self.scrollView.xmg_width;
-    childVc.view.xmg_y = 0;
-    childVc.view.xmg_width = self.scrollView.xmg_width;
-    childVc.view.xmg_height = self.scrollView.xmg_height;
+    if(childVc.view.superview) return;
+    /**
+     *  子控制器的frame 和父控制器尺寸间的不同表达形式
+     */
+//    childVc.view.xmg_x = index * self.scrollView.xmg_width;
+//    childVc.view.xmg_y = 0;
+//    childVc.view.xmg_width = self.scrollView.xmg_width;
+//    childVc.view.xmg_height = self.scrollView.xmg_height;
+    
+//    childVc.view.xmg_x = self.scrollView.contentOffset.x;
+//    childVc.view.xmg_y = self.scrollView.contentOffset.y;
+    
+    childVc.view.frame = self.scrollView.bounds;
     [self.scrollView addSubview:childVc.view];
     
 }

@@ -10,3 +10,4 @@
 
 CGFloat const XMGMargin = 10;
 CGFloat const XMGSmallMargin = XMGMargin*0.5;
+NSString * const XMGCommanURL = @"http://api.budejie.com/api/api_open.php";

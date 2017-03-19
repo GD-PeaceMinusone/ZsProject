@@ -7,7 +7,7 @@
 //
 
 #import "XMGMeFooterView.h"
-#import <AFNetworking.h>
+#import "XMGHTTPSessionManager.h"
 #import "XMGMeSquare.h"
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
@@ -41,7 +41,7 @@
         parameters[@"a"] = @"square";
         parameters[@"c"] = @"topic";
     
-        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        [[XMGHTTPSessionManager manager] GET:XMGCommanURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
             
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

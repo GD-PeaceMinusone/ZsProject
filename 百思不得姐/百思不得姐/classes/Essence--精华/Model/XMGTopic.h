@@ -17,7 +17,7 @@
 /** 帖子的文字内容*/
 @property (nonatomic,copy)NSString *text;
 /** 帖子审核通过的时间*/
-@property (nonatomic,copy)NSString *create_at;
+@property (nonatomic,copy)NSString *created_at;
 /** 赞的数字*/
 @property (nonatomic,assign)NSInteger ding;
 /** 踩的数字*/

@@ -7,33 +7,55 @@
 //
 
 #import "XMGAllTableViewController.h"
-#import <AFNetworking.h>
+#import "XMGHTTPSessionManager.h"
 #import "XMGTopic.h"
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
 #import "XMGRefreshHeader.h"
+#import "XMGRefreshFooter.h"
+#import "XMGTopicCell.h"
+
 @interface XMGAllTableViewController ()
 @property(nonatomic,strong)NSMutableArray<XMGTopic*> *topics;
 @property(nonatomic,strong)UILabel *label;
 /**用来加载下一页数据*/
 @property(nonatomic,copy)NSString *maxtime;
+/**task 管理者**/
+@property(nonatomic,strong)XMGHTTPSessionManager *manager;
 @end
 
 @implementation XMGAllTableViewController
 
+static NSString * const XMGTopicCellID = @"topic";
+#pragma mark - 初始化
+
+- (XMGHTTPSessionManager *)manager {
+
+    if (!_manager) {
+        _manager = [XMGHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
+#pragma mark - lazyloading
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-   
-    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
-    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    [self setupTableView];
     
     [self setupRefresh];
+}
+
+-(void)setupTableView {
+
+    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = XMGCommonBgColor;
+    self.tableView.rowHeight = 200;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGTopicCell class]) bundle:nil] forCellReuseIdentifier:XMGTopicCellID];
+    
 }
 
 -(void)setupRefresh {
@@ -41,7 +63,7 @@
     self.tableView.mj_header = [XMGRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     [self.tableView.mj_header beginRefreshing];
     
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+    self.tableView.mj_footer = [XMGRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 
 }
 
@@ -65,13 +87,15 @@
 
 #pragma mark - 数据加载
 -(void)loadNewTopics {
+    //取消所有任务
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSDictionary *parameters = @{
                                         @"a":@"list",
                                         @"c":@"data"
                                         };
 
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:XMGCommanURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary*  _Nullable responseObject) {
         self.maxtime = responseObject[@"info"][@"maxtime"];
@@ -90,6 +114,8 @@
 }
 
 -(void)loadMoreTopics {
+    //取消所有任务
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 
     NSDictionary *parameters = @{
                                  @"a":@"list",
@@ -97,7 +123,7 @@
                                  @"maxtime":self.maxtime
                                  };
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:XMGCommanURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary*  _Nullable responseObject) {
         XMGWriteToPlist(responseObject, @"moreTopics");
@@ -126,16 +152,8 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    XMGTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    XMGTopicCell *cell =[tableView dequeueReusableCellWithIdentifier:XMGTopicCellID];
+    cell.topic = self.topics[indexPath.row];
     return cell;
 }
 

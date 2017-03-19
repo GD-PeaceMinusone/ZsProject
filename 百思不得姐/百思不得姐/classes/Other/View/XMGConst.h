@@ -10,3 +10,4 @@
 
 UIKIT_EXTERN CGFloat const XMGMargin;
 UIKIT_EXTERN CGFloat const XMGSmallMargin;
+UIKIT_EXTERN NSString * const XMGCommanURL;

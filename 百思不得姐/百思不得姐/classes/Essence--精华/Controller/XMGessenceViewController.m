@@ -87,7 +87,7 @@
     //标题栏
     UIView *titleView = [[UIView alloc]init];
     self.titleView = titleView;
-    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2 ];
+    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
     titleView.frame = CGRectMake(0, 64, self.view.xmg_width, 35);
     [self.view addSubview:titleView];
     

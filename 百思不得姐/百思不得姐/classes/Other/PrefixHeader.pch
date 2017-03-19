@@ -17,6 +17,8 @@
 #import "UITextField+XMGExtension.h"
 #import "XMGConst.h"
 #import "NSString+XMGExtension.h"
+#import "NSDate+XMGExtension.h"
+#import "NSCalendar+XMGExtension.h"
 
 /***将服务器返回的数据写入plist文件***/
 #define XMGWriteToPlist(data,fileName) [data writeToFile:[NSString stringWithFormat:@"/Users/jackeylove/Desktop/%@.plist",fileName] atomically:YES];
@@ -35,6 +37,8 @@
 #define XMGRandomColor XMGColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
 #define XMGCommonBgColor XMGGrayColor(206)
 #define XMGGrayColor(v) XMGColor(v,v,v)
+/** 当前版本号判断*/
+#define ios(version) ([UIDevice currentDevice].systemVersion.doubleValue >= (version))
 
 #endif
 #endif /* PrefixHeader_pch */

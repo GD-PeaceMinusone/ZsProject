@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (XMGExtension)
+
 - (BOOL)isThisYear;
+
+-(BOOL)isToday;
+
+-(BOOL)isYesterday;
+
+-(BOOL)isTomorrow;
+
 @end

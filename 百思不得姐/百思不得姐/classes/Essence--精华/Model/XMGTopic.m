@@ -7,11 +7,23 @@
 //
 
 #import "XMGTopic.h"
+#import <MJExtension.h>
+#import "XMGComment.h"
 
 @implementation XMGTopic
 
 static NSDateFormatter * fmt_;
 static NSCalendar *calendar_;
+
+#pragma mark - MJExtension
+
++ (NSDictionary *)mj_objectClassInArray {
+
+    return @{@"top_cmt" : [XMGComment class]};
+}
+
+
+#pragma mark - other
 
 //在第一次使用该类的时候调用 确保对象只创建一次
 + (void)initialize

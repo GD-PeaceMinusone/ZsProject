@@ -20,6 +20,8 @@
 		5314D99B1E77D9CE00F5C6F3 /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5314D9991E77D9CE00F5C6F3 /* XMGWebViewController.xib */; };
 		5314D99E1E78D66400F5C6F3 /* NSString+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314D99D1E78D66400F5C6F3 /* NSString+XMGExtension.m */; };
 		5314D9A11E78EB2E00F5C6F3 /* XMGClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5314D9A01E78EB2E00F5C6F3 /* XMGClearCacheCell.m */; };
+		5332F3081E7ECCC500885D77 /* XMGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332F3071E7ECCC500885D77 /* XMGUser.m */; };
+		5332F30B1E7ECD4800885D77 /* XMGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5332F30A1E7ECD4800885D77 /* XMGComment.m */; };
 		53445BF11E73B82900DEFE68 /* UITextField+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF01E73B82900DEFE68 /* UITextField+XMGExtension.m */; };
 		53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF31E75427A00DEFE68 /* XMGMeCell.m */; };
 		53445BF71E7544EB00DEFE68 /* XMGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 53445BF61E7544EB00DEFE68 /* XMGConst.m */; };
@@ -99,6 +101,10 @@
 		5314D99D1E78D66400F5C6F3 /* NSString+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMGExtension.m"; sourceTree = "<group>"; };
 		5314D99F1E78EB2E00F5C6F3 /* XMGClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGClearCacheCell.h; sourceTree = "<group>"; };
 		5314D9A01E78EB2E00F5C6F3 /* XMGClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGClearCacheCell.m; sourceTree = "<group>"; };
+		5332F3061E7ECCC500885D77 /* XMGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGUser.h; sourceTree = "<group>"; };
+		5332F3071E7ECCC500885D77 /* XMGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGUser.m; sourceTree = "<group>"; };
+		5332F3091E7ECD4800885D77 /* XMGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGComment.h; sourceTree = "<group>"; };
+		5332F30A1E7ECD4800885D77 /* XMGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGComment.m; sourceTree = "<group>"; };
 		53445BEF1E73B82900DEFE68 /* UITextField+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XMGExtension.h"; sourceTree = "<group>"; };
 		53445BF01E73B82900DEFE68 /* UITextField+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XMGExtension.m"; sourceTree = "<group>"; };
 		53445BF21E75427A00DEFE68 /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
@@ -267,6 +273,10 @@
 			children = (
 				5348414B1E7AB874005E8138 /* XMGTopic.h */,
 				5348414C1E7AB874005E8138 /* XMGTopic.m */,
+				5332F3061E7ECCC500885D77 /* XMGUser.h */,
+				5332F3071E7ECCC500885D77 /* XMGUser.m */,
+				5332F3091E7ECD4800885D77 /* XMGComment.h */,
+				5332F30A1E7ECD4800885D77 /* XMGComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -603,6 +613,7 @@
 				TargetAttributes = {
 					53A616E41E6D6144003FD089 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QT76YECB7N;
 						ProvisioningStyle = Automatic;
 					};
 					53A616FD1E6D6144003FD089 = {
@@ -723,6 +734,7 @@
 				530D8DB31E6FB1E600920E13 /* XMGFollowViewController.m in Sources */,
 				534841441E7A3014005E8138 /* XMGVoiceTableViewController.m in Sources */,
 				538937DA1E6E8D8F00FE7322 /* UIButton+XMGExtension.m in Sources */,
+				5332F30B1E7ECD4800885D77 /* XMGComment.m in Sources */,
 				53D586001E7E630A00F1FC58 /* NSDate+XMGExtension.m in Sources */,
 				538937C61E6DAE8300FE7322 /* UIView+XMGExtension.m in Sources */,
 				5314D9A11E78EB2E00F5C6F3 /* XMGClearCacheCell.m in Sources */,
@@ -751,6 +763,7 @@
 				53445BF11E73B82900DEFE68 /* UITextField+XMGExtension.m in Sources */,
 				5348413E1E7A2FF6005E8138 /* XMGAllTableViewController.m in Sources */,
 				5314D9961E77B61700F5C6F3 /* XMGMeSquareButton.m in Sources */,
+				5332F3081E7ECCC500885D77 /* XMGUser.m in Sources */,
 				538937CE1E6E662000FE7322 /* UIBarButtonItem+XMGExtension.m in Sources */,
 				53FABC5F1E7B9D7800F19CF4 /* XMGRefreshFooter.m in Sources */,
 				5314D99A1E77D9CE00F5C6F3 /* XMGWebViewController.m in Sources */,
@@ -892,9 +905,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = QT76YECB7N;
 				GCC_PREFIX_HEADER = "百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jackeylove.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -907,9 +921,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = QT76YECB7N;
 				GCC_PREFIX_HEADER = "百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jackeylove.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

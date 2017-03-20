@@ -9,6 +9,8 @@
 #import "XMGTopicCell.h"
 #import <UIImageView+WebCache.h>
 #import "XMGTopic.h"
+#import "XMGComment.h"
+#import "XMGUser.h"
 
 @interface XMGTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -65,12 +67,25 @@
         calendar = [NSCalendar currentCalendar];
     }
     **/
-    
-
     [self setupButton:self.dingButton number:topic.ding placeHolder:@"赞"];
     [self setupButton:self.caiButton number:topic.cai placeHolder:@"不赞"];
     [self setupButton:self.repostButton number:topic.repost placeHolder:@"转发"];
     [self setupButton:self.commentButton number:topic.comment placeHolder:@"评论"];
+    
+    if (topic.top_cmt.count) {
+        
+        self.topCmtView.hidden = NO;
+        
+        XMGComment *comment = topic.top_cmt.lastObject;
+        
+        NSString *userName = comment.user.username;
+        NSString *content = comment.content;
+        
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",userName,content];
+    }else {
+    
+        self.topCmtView.hidden = YES;
+    }
     
 }
 

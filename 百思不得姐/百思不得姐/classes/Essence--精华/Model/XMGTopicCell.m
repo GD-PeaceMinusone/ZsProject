@@ -72,20 +72,22 @@
     [self setupButton:self.repostButton number:topic.repost placeHolder:@"转发"];
     [self setupButton:self.commentButton number:topic.comment placeHolder:@"评论"];
     
-    if (topic.top_cmt.count) {
+    if (topic.top_cmt) {
         
         self.topCmtView.hidden = NO;
         
-        XMGComment *comment = topic.top_cmt.lastObject;
-        
-        NSString *userName = comment.user.username;
-        NSString *content = comment.content;
+        NSString *userName = topic.top_cmt.user.username;
+        NSString *content = topic.top_cmt.content;
         
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",userName,content];
     }else {
     
         self.topCmtView.hidden = YES;
     }
+    
+#pragma mark - 根据XMGTopic帖子的类型决定中间添加的控件类型
+    
+    XMGLog(@"%zd", topic.type); 
     
 }
 

@@ -53,7 +53,6 @@ static NSString * const XMGTopicCellID = @"topic";
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = XMGCommonBgColor;
-    self.tableView.rowHeight = 200;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGTopicCell class]) bundle:nil] forCellReuseIdentifier:XMGTopicCellID];
     
 }
@@ -92,7 +91,8 @@ static NSString * const XMGTopicCellID = @"topic";
     
     NSDictionary *parameters = @{
                                         @"a":@"list",
-                                        @"c":@"data"
+                                        @"c":@"data",
+                                        @"type":@"1"
                                         };
 
     [self.manager GET:XMGCommanURL parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -120,6 +120,7 @@ static NSString * const XMGTopicCellID = @"topic";
     NSDictionary *parameters = @{
                                  @"a":@"list",
                                  @"c":@"data",
+                                 @"type":@"1",
                                  @"maxtime":self.maxtime
                                  };
     
@@ -155,6 +156,14 @@ static NSString * const XMGTopicCellID = @"topic";
     XMGTopicCell *cell =[tableView dequeueReusableCellWithIdentifier:XMGTopicCellID];
     cell.topic = self.topics[indexPath.row];
     return cell;
+}
+
+#pragma mark - 代理方法
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    /**根据XMGTopic模型数据计算出cell的具体高度 并返回*/
+    return self.topics[indexPath.row].cellHeight;
 }
 
 //#pragma mark - UIScrollView Methods

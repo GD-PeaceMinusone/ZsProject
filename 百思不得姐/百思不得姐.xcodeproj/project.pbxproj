@@ -36,6 +36,7 @@
 		534841471E7A3022005E8138 /* XMGPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534841461E7A3022005E8138 /* XMGPictureTableViewController.m */; };
 		5348414A1E7A302F005E8138 /* XMGWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534841491E7A302F005E8138 /* XMGWordTableViewController.m */; };
 		5348414D1E7AB874005E8138 /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5348414C1E7AB874005E8138 /* XMGTopic.m */; };
+		536CF9631E7FC2CF0041DE46 /* XMGExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 536CF9621E7FC2CF0041DE46 /* XMGExtensionConfig.m */; };
 		5384FFB61E76D8880046E1B8 /* XMGMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */; };
 		538937C11E6DAE8300FE7322 /* XMGessenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389379F1E6DAE8300FE7322 /* XMGessenceViewController.m */; };
 		538937C31E6DAE8300FE7322 /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538937AB1E6DAE8300FE7322 /* XMGMeViewController.m */; };
@@ -53,6 +54,10 @@
 		53A616F51E6D6144003FD089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A616F41E6D6144003FD089 /* Assets.xcassets */; };
 		53A617031E6D6144003FD089 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A617021E6D6144003FD089 /* _____Tests.m */; };
 		53A6170E1E6D6144003FD089 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A6170D1E6D6144003FD089 /* _____UITests.m */; };
+		53C912F81E801FC200A58E5B /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C912F71E801FC200A58E5B /* XMGTopicVideoView.m */; };
+		53C912FA1E801FE500A58E5B /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C912F91E801FE500A58E5B /* XMGTopicVideoView.xib */; };
+		53C912FD1E80278500A58E5B /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C912FC1E80278500A58E5B /* XMGTopicPictureView.m */; };
+		53C912FF1E80279900A58E5B /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C912FE1E80279900A58E5B /* XMGTopicPictureView.xib */; };
 		53D586001E7E630A00F1FC58 /* NSDate+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D585FF1E7E630A00F1FC58 /* NSDate+XMGExtension.m */; };
 		53D586031E7E664300F1FC58 /* NSCalendar+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D586021E7E664300F1FC58 /* NSCalendar+XMGExtension.m */; };
 		53FABC5F1E7B9D7800F19CF4 /* XMGRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FABC5E1E7B9D7800F19CF4 /* XMGRefreshFooter.m */; };
@@ -132,6 +137,8 @@
 		534841491E7A302F005E8138 /* XMGWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordTableViewController.m; sourceTree = "<group>"; };
 		5348414B1E7AB874005E8138 /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
 		5348414C1E7AB874005E8138 /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
+		536CF9611E7FC2CF0041DE46 /* XMGExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGExtensionConfig.h; sourceTree = "<group>"; };
+		536CF9621E7FC2CF0041DE46 /* XMGExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGExtensionConfig.m; sourceTree = "<group>"; };
 		5384FFB41E76D8880046E1B8 /* XMGMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeSquare.h; sourceTree = "<group>"; };
 		5384FFB51E76D8880046E1B8 /* XMGMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeSquare.m; sourceTree = "<group>"; };
 		5389379E1E6DAE8300FE7322 /* XMGessenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGessenceViewController.h; sourceTree = "<group>"; };
@@ -169,6 +176,12 @@
 		53A617091E6D6144003FD089 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A6170D1E6D6144003FD089 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		53A6170F1E6D6144003FD089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C912F61E801FC200A58E5B /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
+		53C912F71E801FC200A58E5B /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
+		53C912F91E801FE500A58E5B /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
+		53C912FB1E80278500A58E5B /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
+		53C912FC1E80278500A58E5B /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
+		53C912FE1E80279900A58E5B /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
 		53D585FE1E7E630A00F1FC58 /* NSDate+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XMGExtension.h"; sourceTree = "<group>"; };
 		53D585FF1E7E630A00F1FC58 /* NSDate+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMGExtension.m"; sourceTree = "<group>"; };
 		53D586011E7E664300F1FC58 /* NSCalendar+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+XMGExtension.h"; sourceTree = "<group>"; };
@@ -289,6 +302,12 @@
 				53FABC661E7BC77400F19CF4 /* XMGTopicCell.xib */,
 				534841391E7973FD005E8138 /* XMGTitleButton.h */,
 				5348413A1E7973FD005E8138 /* XMGTitleButton.m */,
+				53C912F61E801FC200A58E5B /* XMGTopicVideoView.h */,
+				53C912F71E801FC200A58E5B /* XMGTopicVideoView.m */,
+				53C912F91E801FE500A58E5B /* XMGTopicVideoView.xib */,
+				53C912FB1E80278500A58E5B /* XMGTopicPictureView.h */,
+				53C912FC1E80278500A58E5B /* XMGTopicPictureView.m */,
+				53C912FE1E80279900A58E5B /* XMGTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +440,8 @@
 				538937B51E6DAE8300FE7322 /* AppDelegate.h */,
 				538937B61E6DAE8300FE7322 /* AppDelegate.m */,
 				538937BF1E6DAE8300FE7322 /* PrefixHeader.pch */,
+				536CF9611E7FC2CF0041DE46 /* XMGExtensionConfig.h */,
+				536CF9621E7FC2CF0041DE46 /* XMGExtensionConfig.m */,
 				538937B71E6DAE8300FE7322 /* Categary */,
 				538937BA1E6DAE8300FE7322 /* Controller */,
 				538937C01E6DAE8300FE7322 /* View */,
@@ -655,8 +676,10 @@
 			files = (
 				530D8DB51E6FB21600920E13 /* XMGFollowViewController.xib in Resources */,
 				53A616F51E6D6144003FD089 /* Assets.xcassets in Resources */,
+				53C912FF1E80279900A58E5B /* XMGTopicPictureView.xib in Resources */,
 				53FABC671E7BC77400F19CF4 /* XMGTopicCell.xib in Resources */,
 				5314D99B1E77D9CE00F5C6F3 /* XMGWebViewController.xib in Resources */,
+				53C912FA1E801FE500A58E5B /* XMGTopicVideoView.xib in Resources */,
 				530D8DBA1E6FC38D00920E13 /* XMGLoginRegisterViewController.xib in Resources */,
 				534841381E79267B005E8138 /* XMGPravicyCell.xib in Resources */,
 			);
@@ -739,12 +762,14 @@
 				538937C61E6DAE8300FE7322 /* UIView+XMGExtension.m in Sources */,
 				5314D9A11E78EB2E00F5C6F3 /* XMGClearCacheCell.m in Sources */,
 				538937C81E6DAE8300FE7322 /* XMGTabBarController.m in Sources */,
+				53C912FD1E80278500A58E5B /* XMGTopicPictureView.m in Sources */,
 				5348414D1E7AB874005E8138 /* XMGTopic.m in Sources */,
 				53FABC651E7BC76700F19CF4 /* XMGTopicCell.m in Sources */,
 				538937DD1E6E8F4400FE7322 /* XMGNavigationController.m in Sources */,
 				530D8DC31E704C0300920E13 /* XMGLoginRegisterTextField.m in Sources */,
 				534841271E790FB8005E8138 /* XMGSettingCell.m in Sources */,
 				53D586031E7E664300F1FC58 /* NSCalendar+XMGExtension.m in Sources */,
+				536CF9631E7FC2CF0041DE46 /* XMGExtensionConfig.m in Sources */,
 				538937C51E6DAE8300FE7322 /* AppDelegate.m in Sources */,
 				5384FFB61E76D8880046E1B8 /* XMGMeSquare.m in Sources */,
 				530D8DB91E6FC38D00920E13 /* XMGLoginRegisterViewController.m in Sources */,
@@ -753,6 +778,7 @@
 				53445BFA1E75643400DEFE68 /* XMGMeFooterView.m in Sources */,
 				534841371E79267B005E8138 /* XMGPravicyCell.m in Sources */,
 				534841411E7A3002005E8138 /* XMGVideoTableViewController.m in Sources */,
+				53C912F81E801FC200A58E5B /* XMGTopicVideoView.m in Sources */,
 				53A616EA1E6D6144003FD089 /* main.m in Sources */,
 				53445BF41E75427A00DEFE68 /* XMGMeCell.m in Sources */,
 				538937C31E6DAE8300FE7322 /* XMGMeViewController.m in Sources */,
@@ -908,7 +934,7 @@
 				DEVELOPMENT_TEAM = QT76YECB7N;
 				GCC_PREFIX_HEADER = "百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jackeylove.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -924,7 +950,7 @@
 				DEVELOPMENT_TEAM = QT76YECB7N;
 				GCC_PREFIX_HEADER = "百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jackeylove.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";

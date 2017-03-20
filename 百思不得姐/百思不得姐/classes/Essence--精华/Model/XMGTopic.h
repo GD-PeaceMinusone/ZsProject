@@ -7,6 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger,XMGTopicType) {
+    /** 图片 */
+    XMGTopicTypePicture = 10,
+    /** 段子 */
+    XMGTopicTypeWord = 29,
+    /** 音频 */
+    XMGTopicTypeVoice = 31,
+    /** 视频 */
+    XMGTopicTypeVideo = 41,
+};
+
 @class XMGComment;
 
 @interface XMGTopic : NSObject
@@ -26,6 +38,14 @@
 @property (nonatomic,assign)NSInteger repost;
 /** 评论数量*/
 @property (nonatomic,assign)NSInteger comment;
-/**最热评论**/
-@property(nonatomic,strong)NSArray *top_cmt;
+/** 最热评论 */
+@property(nonatomic,strong)XMGComment *top_cmt;
+/** 帖子类型 */
+@property (nonatomic,assign) NSInteger type;
+/** 帖子中间内容的真实高度 */
+@property (nonatomic,assign) NSInteger height;
+/** 帖子中间内容的真实宽度 */
+@property (nonatomic,assign) NSInteger width;
+/**** 额外增加的属性 方便开发 ****/
+@property (nonatomic,assign) CGFloat cellHeight;
 @end

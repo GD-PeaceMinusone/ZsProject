@@ -17,4 +17,10 @@
 
 @implementation XMGTopicPictureView
 
+- (void)awakeFromNib {
+    
+    [super awakeFromNib];
+    self.autoresizingMask = UIViewAutoresizingNone;
+}
+
 @end

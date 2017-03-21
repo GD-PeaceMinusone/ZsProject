@@ -12,10 +12,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
-
 @end
 
 @implementation XMGTopicVideoView
 
+- (void)awakeFromNib {
+
+    [super awakeFromNib];
+    self.autoresizingMask = UIViewAutoresizingNone;
+}
 @end

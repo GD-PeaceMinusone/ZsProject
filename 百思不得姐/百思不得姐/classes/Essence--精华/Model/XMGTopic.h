@@ -48,4 +48,6 @@ typedef NS_ENUM(NSInteger,XMGTopicType) {
 @property (nonatomic,assign) NSInteger width;
 /**** 额外增加的属性 方便开发 ****/
 @property (nonatomic,assign) CGFloat cellHeight;
+/**中间内容的Frame*/
+@property (nonatomic,assign) CGRect contentF;
 @end

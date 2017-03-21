@@ -15,9 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="425" height="273"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcC-W0-Mse">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QcC-W0-Mse">
                     <rect key="frame" x="0.0" y="0.0" width="425" height="273"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.6951935279" green="0.6951935279" blue="0.6951935279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="Qik-xa-6NX">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
@@ -33,7 +33,11 @@
             <constraints>
                 <constraint firstItem="Qik-xa-6NX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3yM-PD-2wH"/>
                 <constraint firstAttribute="bottom" secondItem="Ego-P5-qjB" secondAttribute="bottom" constant="3" id="Av4-2a-DX2"/>
+                <constraint firstItem="QcC-W0-Mse" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FHV-P1-ZzJ"/>
                 <constraint firstItem="Ego-P5-qjB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LxZ-fe-WGV"/>
+                <constraint firstAttribute="bottom" secondItem="QcC-W0-Mse" secondAttribute="bottom" id="QA7-XS-SRs"/>
+                <constraint firstAttribute="trailing" secondItem="QcC-W0-Mse" secondAttribute="trailing" id="V5f-xd-Ody"/>
+                <constraint firstItem="QcC-W0-Mse" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rcD-ss-3De"/>
                 <constraint firstItem="Qik-xa-6NX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rf9-3Y-CxV"/>
                 <constraint firstAttribute="trailing" secondItem="Ego-P5-qjB" secondAttribute="trailing" id="wc3-Zy-EG1"/>
             </constraints>

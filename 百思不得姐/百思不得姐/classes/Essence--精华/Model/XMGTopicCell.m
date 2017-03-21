@@ -147,7 +147,7 @@
             self.pictureView.hidden = YES;
             self.videoView.hidden = YES;
             self.voiceView.hidden = YES;
-            
+        
             break;
             
         case XMGTopicTypeVideo:
@@ -156,6 +156,7 @@
             self.videoView.hidden = NO;
             self.pictureView.hidden = YES;
             self.voiceView.hidden = YES;
+            self.videoView.frame = topic.contentF;
             
             break;
             
@@ -165,6 +166,7 @@
             self.voiceView.hidden = NO;
             self.videoView.hidden = YES;
             self.pictureView.hidden = YES;
+            self.voiceView.frame = topic.contentF;
             
             break;
             
@@ -174,6 +176,7 @@
             self.pictureView.hidden = NO;
             self.videoView.hidden = YES;
             self.voiceView.hidden = YES;
+            self.pictureView.frame = topic.contentF;
             
             break;
             

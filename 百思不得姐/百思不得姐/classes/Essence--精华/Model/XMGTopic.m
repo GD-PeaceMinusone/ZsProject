@@ -103,6 +103,8 @@ static NSCalendar *calendar_;
     if (self.type != XMGTopicTypeWord) { // 如果是图片\声音\视频帖子, 才需要计算中间内容的高度
         // 中间内容的高度 == 中间内容的宽度 * 图片的真实高度 / 图片的真实宽度
         CGFloat contentH = textMaxW * self.height / self.width;
+        self.contentF = CGRectMake(XMGMargin, _cellHeight, textMaxW, contentH);
+        
         _cellHeight += contentH + XMGMargin;
     }
     

@@ -15,9 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="372" height="223"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XG1-92-gIQ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XG1-92-gIQ">
                     <rect key="frame" x="0.0" y="0.0" width="372" height="223"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.6951935279" green="0.6951935279" blue="0.6951935279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-YN-6QN">
                     <rect key="frame" x="155" y="80" width="63" height="63"/>
@@ -41,8 +41,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="sGn-YN-6QN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4vs-0S-H5x"/>
+                <constraint firstAttribute="bottom" secondItem="XG1-92-gIQ" secondAttribute="bottom" id="5b1-AO-Th5"/>
+                <constraint firstItem="XG1-92-gIQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="76t-SS-DxA"/>
                 <constraint firstItem="sGn-YN-6QN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="EJY-Lu-icm"/>
                 <constraint firstAttribute="bottom" secondItem="8gI-6a-WiZ" secondAttribute="bottom" id="ODF-Hm-HcF"/>
+                <constraint firstItem="XG1-92-gIQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TbB-Fx-sf2"/>
+                <constraint firstAttribute="trailing" secondItem="XG1-92-gIQ" secondAttribute="trailing" id="lgT-oe-FxS"/>
                 <constraint firstAttribute="trailing" secondItem="fa5-dh-3Or" secondAttribute="trailing" id="pxZ-2k-64b"/>
                 <constraint firstAttribute="trailing" secondItem="8gI-6a-WiZ" secondAttribute="trailing" id="u7n-xK-hi0"/>
                 <constraint firstItem="fa5-dh-3Or" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uyi-wa-6O7"/>

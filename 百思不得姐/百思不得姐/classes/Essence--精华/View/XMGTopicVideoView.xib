@@ -15,9 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="436" height="269"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mw-ff-pVG" userLabel="imageView" customClass="XMGTopicVideoV">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Mw-ff-pVG" userLabel="imageView" customClass="XMGTopicVideoV">
                     <rect key="frame" x="0.0" y="0.0" width="436" height="269"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.6951935279" green="0.6951935279" blue="0.6951935279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-wb-yIk">
                     <rect key="frame" x="182.5" y="99.5" width="71" height="71"/>
@@ -41,11 +41,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2YQ-7J-yfJ" secondAttribute="trailing" id="1fy-K6-d0y"/>
+                <constraint firstAttribute="trailing" secondItem="6Mw-ff-pVG" secondAttribute="trailing" id="27O-Uw-kIT"/>
+                <constraint firstItem="6Mw-ff-pVG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6bn-h6-1nb"/>
                 <constraint firstItem="o6G-wb-yIk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q22-7c-bcE"/>
+                <constraint firstAttribute="bottom" secondItem="6Mw-ff-pVG" secondAttribute="bottom" id="R7f-9L-oXD"/>
                 <constraint firstAttribute="trailing" secondItem="lQy-jY-I7U" secondAttribute="trailing" id="S8e-19-elb"/>
                 <constraint firstAttribute="bottom" secondItem="2YQ-7J-yfJ" secondAttribute="bottom" id="SS2-gf-0Ju"/>
                 <constraint firstItem="o6G-wb-yIk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="acj-ee-7nl"/>
                 <constraint firstItem="lQy-jY-I7U" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fUc-m7-qQd"/>
+                <constraint firstItem="6Mw-ff-pVG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hhC-fo-uK2"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

@@ -1,13 +1,13 @@
 //
-//  XMGTopicPictureView.h
+//  XMGTopicVoiceView.h
 //  百思不得姐
 //
 //  Created by Jackeylove on 2017/3/21.
 //  Copyright © 2017年 Jackeylove. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface XMGTopicPictureView : UIView
+@interface XMGTopicVoiceView : UIView
 
 @end

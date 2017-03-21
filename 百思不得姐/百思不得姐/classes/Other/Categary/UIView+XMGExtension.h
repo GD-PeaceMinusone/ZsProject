@@ -18,4 +18,6 @@
 @property (nonatomic,assign)CGFloat xmg_centerY;
 @property (nonatomic,assign)CGFloat xmg_right;
 @property (nonatomic,assign)CGFloat xmg_bottom;
+/**加载xib*/
++(instancetype)viewFromXib;
 @end

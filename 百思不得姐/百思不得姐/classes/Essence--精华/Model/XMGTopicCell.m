@@ -11,6 +11,9 @@
 #import "XMGTopic.h"
 #import "XMGComment.h"
 #import "XMGUser.h"
+#import "XMGTopicVideoView.h"
+#import "XMGTopicVoiceView.h"
+#import "XMGTopicPictureView.h"
 
 @interface XMGTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -23,9 +26,59 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+
+/**视频控件*/
+@property(nonatomic,weak)XMGTopicVideoView *videoView;
+/**图片控件*/
+@property(nonatomic,weak)XMGTopicPictureView *pictureView;
+/**音频控件*/
+@property(nonatomic,weak)XMGTopicVoiceView *voiceView;
+
 @end
+
 @implementation XMGTopicCell
 
+#pragma mark - 懒加载
+
+- (XMGTopicVideoView *)videoView {
+
+    if (!_videoView) {
+        
+        XMGTopicVideoView *videoView = [XMGTopicVideoView viewFromXib];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    
+    return _videoView;
+}
+
+-(XMGTopicVoiceView *)voiceView {
+
+    if (!_voiceView) {
+        
+        XMGTopicVoiceView *voiceView = [XMGTopicVoiceView viewFromXib];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+        
+    }
+    
+    return _voiceView;
+}
+
+- (XMGTopicPictureView *)pictureView {
+
+    if (!_pictureView) {
+        
+        XMGTopicPictureView *pictureView = [XMGTopicPictureView viewFromXib];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+        
+    }
+    
+    return _pictureView;
+}
+
+#pragma mark - 初始化
 - (IBAction)more {
     
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
@@ -87,7 +140,46 @@
     
 #pragma mark - 根据XMGTopic帖子的类型决定中间添加的控件类型
     
-    XMGLog(@"%zd", topic.type); 
+    switch (topic.type) {
+            
+        case XMGTopicTypeWord:
+            
+            self.pictureView.hidden = YES;
+            self.videoView.hidden = YES;
+            self.voiceView.hidden = YES;
+            
+            break;
+            
+        case XMGTopicTypeVideo:
+            
+            [self.contentView addSubview:self.videoView];
+            self.videoView.hidden = NO;
+            self.pictureView.hidden = YES;
+            self.voiceView.hidden = YES;
+            
+            break;
+            
+        case XMGTopicTypeVoice:
+            
+            [self.contentView addSubview:self.voiceView];
+            self.voiceView.hidden = NO;
+            self.videoView.hidden = YES;
+            self.pictureView.hidden = YES;
+            
+            break;
+            
+        case XMGTopicTypePicture:
+            
+            [self.contentView addSubview:self.pictureView];
+            self.pictureView.hidden = NO;
+            self.videoView.hidden = YES;
+            self.voiceView.hidden = YES;
+            
+            break;
+            
+        default:
+            break;
+    }
     
 }
 

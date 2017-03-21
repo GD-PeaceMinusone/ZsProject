@@ -10,6 +10,13 @@
 
 @implementation UIView (XMGExtension)
 
++ (instancetype)viewFromXib {
+
+    /**哪个类调用方法 就加载跟类名相同的xib*/
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+
+}
+
 -(CGSize)xmg_size {
 
     return self.frame.size;

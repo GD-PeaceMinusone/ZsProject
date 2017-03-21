@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XMGTopicVideoView : NSObject
+@interface XMGTopicVideoView : UIView
 
 @end

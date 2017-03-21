@@ -8,6 +8,14 @@
 
 #import "XMGTopicVideoView.h"
 
+@interface XMGTopicVideoView ()
+@property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+
+@end
+
 @implementation XMGTopicVideoView
 
 @end

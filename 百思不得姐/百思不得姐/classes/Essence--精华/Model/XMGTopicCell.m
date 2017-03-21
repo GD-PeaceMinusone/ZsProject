@@ -177,6 +177,7 @@
             self.videoView.hidden = YES;
             self.voiceView.hidden = YES;
             self.pictureView.frame = topic.contentF;
+            self.pictureView.topic = topic;
             
             break;
             

@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class XMGTopic;
+
 @interface XMGTopicPictureView : UIView
+
+@property(nonatomic,strong)XMGTopic *topic;
 
 @end

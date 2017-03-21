@@ -38,10 +38,18 @@ typedef NS_ENUM(NSInteger,XMGTopicType) {
 @property (nonatomic,assign)NSInteger repost;
 /** 评论数量*/
 @property (nonatomic,assign)NSInteger comment;
+/**小图*/
+@property (nonatomic,copy)NSString *small_image;
+/**大图*/
+@property (nonatomic,copy)NSString *large_image;
+/**中等图*/
+@property (nonatomic,copy)NSString *middle_image;
 /** 最热评论 */
 @property(nonatomic,strong)XMGComment *top_cmt;
 /** 帖子类型 */
 @property (nonatomic,assign) NSInteger type;
+/**是否为gif图片*/
+@property (nonatomic,assign) BOOL is_gif;
 /** 帖子中间内容的真实高度 */
 @property (nonatomic,assign) NSInteger height;
 /** 帖子中间内容的真实宽度 */

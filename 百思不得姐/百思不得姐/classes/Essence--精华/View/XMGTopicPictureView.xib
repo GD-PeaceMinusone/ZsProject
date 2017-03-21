@@ -23,7 +23,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-P5-qjB">
-                    <rect key="frame" x="0.0" y="227" width="425" height="43"/>
+                    <rect key="frame" x="0.0" y="230" width="425" height="43"/>
                     <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="-1"/>
                     <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
@@ -32,7 +32,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Qik-xa-6NX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3yM-PD-2wH"/>
-                <constraint firstAttribute="bottom" secondItem="Ego-P5-qjB" secondAttribute="bottom" constant="3" id="Av4-2a-DX2"/>
+                <constraint firstAttribute="bottom" secondItem="Ego-P5-qjB" secondAttribute="bottom" id="Av4-2a-DX2"/>
                 <constraint firstItem="QcC-W0-Mse" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FHV-P1-ZzJ"/>
                 <constraint firstItem="Ego-P5-qjB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LxZ-fe-WGV"/>
                 <constraint firstAttribute="bottom" secondItem="QcC-W0-Mse" secondAttribute="bottom" id="QA7-XS-SRs"/>

@@ -27,7 +27,10 @@
     [XMGTopic mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         
         return @{
-                 @"top_cmt":@"top_cmt[0]"
+                 @"top_cmt":@"top_cmt[0]",
+                 @"small_image":@"image0",
+                 @"midlle_image2":@"image2",
+                 @"large_image":@"image1"
                  };
     }];
 }

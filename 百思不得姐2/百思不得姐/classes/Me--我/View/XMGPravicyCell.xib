@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XMGPravicyCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="privacy" id="KGk-i7-Jjw" customClass="XMGPravicyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打开&quot;只有我&quot;设置?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xW-ns-fxC">
+                        <rect key="frame" x="8" y="11" width="179" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="G6K-y0-FSW"/>
+                            <constraint firstAttribute="width" constant="179" id="gc0-6H-zoF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-ZU-vYJ">
+                        <rect key="frame" x="263" y="6" width="51" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="1aJ-Pp-Iz9"/>
+                            <constraint firstAttribute="width" constant="49" id="vct-TY-cHo"/>
+                        </constraints>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0xW-ns-fxC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Cmp-co-323"/>
+                    <constraint firstAttribute="bottom" secondItem="Sm5-ZU-vYJ" secondAttribute="bottom" constant="6" id="KRH-jW-pIg"/>
+                    <constraint firstAttribute="trailing" secondItem="Sm5-ZU-vYJ" secondAttribute="trailing" constant="8" id="UBF-ef-RFT"/>
+                    <constraint firstAttribute="bottom" secondItem="0xW-ns-fxC" secondAttribute="bottom" constant="11" id="aDy-Z5-jli"/>
+                    <constraint firstItem="0xW-ns-fxC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="anm-xe-uMK"/>
+                    <constraint firstItem="Sm5-ZU-vYJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="nUe-me-SiE"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

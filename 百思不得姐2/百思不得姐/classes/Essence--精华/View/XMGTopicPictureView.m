@@ -41,8 +41,13 @@
     XMGSeeBigPictureViewController *vc = [[XMGSeeBigPictureViewController alloc]init];
     vc.topic = self.topic;
     [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
-    
 }
+- (IBAction)seeBigPicture:(id)sender {
+    XMGSeeBigPictureViewController *vc = [[XMGSeeBigPictureViewController alloc]init];
+    vc.topic = self.topic;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+}
+
 
 - (void)setTopic:(XMGTopic *)topic {
     

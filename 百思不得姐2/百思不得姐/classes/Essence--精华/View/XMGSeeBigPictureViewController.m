@@ -143,7 +143,19 @@ static NSString *XMGAssetCollectionTtile = @"王妍";
             }
             
             //3.添加"相机胶卷"中的图片到自定义"相簿"中
-            
+            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                
+                
+            } completionHandler:^(BOOL success, NSError * _Nullable error) {
+                if (success == NO) {
+                    
+                    return;
+                }else {
+                
+                    [SVProgressHUD showSuccessWithStatus:@"图片保存成功"];
+                }
+                
+            }];
         }];
         
         

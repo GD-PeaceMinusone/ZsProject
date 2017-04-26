@@ -7,7 +7,17 @@
 //
 
 #import "UIViewController+Extension.h"
+#import "REFrostedViewController.h"
 
 @implementation UIViewController (Extension)
+
++(UINavigationController *)getNavi {
+
+    REFrostedViewController *vc = (REFrostedViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    UITabBarController *tabBarVc =(UITabBarController*)vc.contentViewController;
+    
+    return tabBarVc.selectedViewController;
+}
 
 @end

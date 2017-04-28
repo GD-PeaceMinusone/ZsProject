@@ -15,9 +15,9 @@
 
     REFrostedViewController *vc = (REFrostedViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     
-    UITabBarController *tabBarVc =(UITabBarController*)vc.contentViewController;
+    UINavigationController *navi =(UINavigationController*)vc.contentViewController;
     
-    return tabBarVc.selectedViewController;
+    return navi;
 }
 
 @end

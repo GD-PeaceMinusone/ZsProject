@@ -17,7 +17,7 @@
     
     UITabBarController *tabBarVc =(UITabBarController*)vc.contentViewController;
     
-    UINavigationController *navi = tabBarVc.selectedViewController;
+    RTRootNavigationController *navi = tabBarVc.selectedViewController;
     
     return navi;
 }

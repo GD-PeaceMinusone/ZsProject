@@ -10,6 +10,14 @@
 
 @implementation UIImage (WSIExtension)
 
++ (UIImage *)loadImageWithImgName:(NSString *)imageName {
+    UIImage *img = [UIImage imageNamed:imageName];
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0) {
+        return [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
+    return img;
+}
+
 
 + (instancetype)imageWithIconName:(NSString *)icon borderImage:(NSString *)borderImage border:(int)border{
     

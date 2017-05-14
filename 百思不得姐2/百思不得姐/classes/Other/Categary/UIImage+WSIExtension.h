@@ -11,4 +11,5 @@
 @interface UIImage (WSIExtension)
 + (instancetype)imageWithIconName:(NSString *)icon borderImage:(NSString *)borderImage border:(int)borde;
 + (instancetype)imageWithIcon: (UIImage*)image borderImage:(NSString *)borderImage Border:(int)border;
++ (UIImage *)loadImageWithImgName:(NSString *)imageName;
 @end
